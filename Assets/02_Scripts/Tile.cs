@@ -1,10 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
     public bool imEmpty;
+
+    public GameObject tileForward;
+    public GameObject tileForwardRight;
+    public GameObject tileForwardLeft;
+    public GameObject tileRight;
+    public GameObject tileLeft;
+    public GameObject tileBack;
+    public GameObject tileBackLeft;
+    public GameObject tileBackRight;
+
+    
+    public Collider pionOnMe;
 
     public void GoEmpty()
     {
@@ -18,7 +31,7 @@ public class Tile : MonoBehaviour
 
     }
 
-    public float raycastDistance = 10f;
+    public float raycastDistance = 1f;
     public LayerMask layerMask;
 
     private void Awake()
@@ -30,12 +43,12 @@ public class Tile : MonoBehaviour
         ShootRaycastFromTop();
     }
 
-    /*private void FixedUpdate()
+    private void FixedUpdate()
     {
         CheckTile();
-    }*/
+    }
 
-    void ShootRaycastFromTop()
+    public void ShootRaycastFromTop()
     {
         // Calculer l'origine du raycast
         Vector3 raycastOrigin = transform.position + Vector3.up * transform.localScale.y;
@@ -43,13 +56,17 @@ public class Tile : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(raycastOrigin, Vector3.up, out hit, raycastDistance, layerMask))
         {
-            Debug.Log("Touché quelque chose : " + hit.collider.name);
+            //Debug.Log("Touché quelque chose : " + hit.collider.name);
             GoFull();
+
+            pionOnMe = hit.collider;
+            pionOnMe.GetComponent<Pion>().tiles = this.gameObject;
         }
         else
         {
-            Debug.Log("Aucun objet touché.");
+            //Debug.Log("Aucun objet touché.");
             GoEmpty();
+            //pionOnMe = hit.collider.GetComponent<GameObject>();
         }
 
         // Debug dessiner le rayon

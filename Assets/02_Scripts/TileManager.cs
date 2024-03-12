@@ -18,6 +18,11 @@ public class TileManager : MonoBehaviour
 
         for (int i = 0; i < tiles.Length; i++)
         {
+            tiles[i].ShootRaycastFromTop();
+        }
+
+        for (int i = 0; i < tiles.Length; i++)
+        {
             if (tiles[i].imEmpty)
             {
                 tilesEmpty.Add(tiles[i]);
