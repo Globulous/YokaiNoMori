@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
     public bool imEmpty;
+    public Vector3 pionTransform;
 
     public GameObject tileForward;
     public GameObject tileForwardRight;
@@ -17,7 +19,14 @@ public class Tile : MonoBehaviour
     public GameObject tileBackRight;
 
     
-    public Collider pionOnMe;
+    public GameObject pionOnMe;
+    public bool imGoodForPlay = false;
+
+    public Material normalColor;
+    public Material usableColor;
+    public Material usableKillColor;
+
+    public TileManager tileManager;
 
     public void GoEmpty()
     {
@@ -38,14 +47,16 @@ public class Tile : MonoBehaviour
     {
         CheckTile();
     }
-    public void CheckTile()
-    {
-        ShootRaycastFromTop();
-    }
+    
 
     private void FixedUpdate()
     {
         CheckTile();
+    }
+
+    public void CheckTile()
+    {
+        ShootRaycastFromTop();
     }
 
     public void ShootRaycastFromTop()
@@ -59,7 +70,7 @@ public class Tile : MonoBehaviour
             //Debug.Log("Touché quelque chose : " + hit.collider.name);
             GoFull();
 
-            pionOnMe = hit.collider;
+            pionOnMe = hit.collider.gameObject;
             pionOnMe.GetComponent<Pion>().tiles = this.gameObject;
         }
         else
@@ -72,4 +83,93 @@ public class Tile : MonoBehaviour
         // Debug dessiner le rayon
         Debug.DrawRay(raycastOrigin, Vector3.up * raycastDistance, Color.red);
     }
+
+    public void Usable()
+    {
+        GetComponent<Renderer>().material = usableColor;
+        imGoodForPlay = true;
+    }
+
+    public void ResetMatt()
+    {
+        GetComponent<Renderer>().material = normalColor;
+        imGoodForPlay = false;
+    }
+
+    public void usableKill()
+    {
+        GetComponent<Renderer>().material = usableKillColor;
+    }
+
+    public void OnMouseDown()
+    {
+        if (tileManager.actionPion && imGoodForPlay)
+        {
+            if (pionOnMe != null)
+            {
+                if (pionOnMe.GetComponent<Pion>().bot != tileManager.pionUse.GetComponent<Pion>().bot)
+                {
+                    tileManager.pionUse.transform.position = pionTransform;
+
+                    if (tileManager.turnbot)
+                    {
+                        pionOnMe.GetComponent<Pion>().isDead = true;
+
+                        tileManager.pionDeadForP1.Add(pionOnMe);
+
+                        for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
+                        {
+                            tileManager.pionDeadForP1[i].transform.position = tileManager.cimP1[i].transform.position;
+                        }
+                    }
+                    else
+                    {
+                        pionOnMe.GetComponent<Pion>().isDead = true;
+
+                        tileManager.pionDeadForP2.Add(pionOnMe);
+
+                        for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
+                        {
+                            tileManager.pionDeadForP2[i].transform.position = tileManager.cimP2[i].transform.position;
+                        }
+                    }
+                    
+
+                    //Debug.Log("je tue et je prend la place");
+
+                    tileManager.pionUse.GetComponent<Pion>().DeplacementAction();
+
+                    pionOnMe = tileManager.pionUse;
+
+                    pionOnMe.GetComponent<Pion>().tiles = this.gameObject;
+
+                    tileManager.EndTurn();
+
+                }              
+            }
+            else
+            {
+                if (imEmpty)
+                {
+                    tileManager.pionUse.transform.position = pionTransform;
+
+                    tileManager.pionUse.GetComponent<Pion>().DeplacementAction();
+
+                    pionOnMe = tileManager.pionUse;
+
+                    pionOnMe.GetComponent<Pion>().tiles = this.gameObject;
+
+                    tileManager.EndTurn();
+                }
+                else
+                {
+                    Debug.Log("tu peux pas jouer la ");
+                }
+            }
+
+            
+        }
+    }
+
+
 }

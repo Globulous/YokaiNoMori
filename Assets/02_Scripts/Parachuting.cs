@@ -27,16 +27,16 @@ public class Parachuting : MonoBehaviour
 
         if (isCimetiere)
         {
-            Parachuting();
+            //Parachuting();
         }
 
 
     }
 
-    void Parachuting()
+    /*void Parachuting()
     {
         GameObject parachuteEffect = Instantiate(parachutePrefab, transform.position, Quaternion.identity);
         Destroy(parachuteEffect, 3f);
         isCimetiere = false;
-    }
+    }*/
 }
