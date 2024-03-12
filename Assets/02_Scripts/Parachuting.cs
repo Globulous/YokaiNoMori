@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Parachuting : MonoBehaviour
 {
+    public GameObject tileDead;
     public bool isdead;
     public bool isCimetiere;
     public GameObject cimetierePos;
@@ -11,17 +12,28 @@ public class Parachuting : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            isdead = true;
+        }
+
+
         if (isdead)
         {
-            transform.position = cimetierePos.transform.position;
+            tileDead.transform.position = cimetierePos.transform.position;
+            isCimetiere = true;
         }
-        else if (isCimetiere)
+
+
+        if (isCimetiere)
         {
-            PerformParachuting();
+            Parachuting();
         }
+
+
     }
 
-    void PerformParachuting()
+    void Parachuting()
     {
         GameObject parachuteEffect = Instantiate(parachutePrefab, transform.position, Quaternion.identity);
         Destroy(parachuteEffect, 3f);
