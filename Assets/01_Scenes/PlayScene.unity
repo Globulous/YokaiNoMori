@@ -1207,6 +1207,8 @@ MonoBehaviour:
   - {fileID: 1444523802}
   roiP1: {fileID: 7589295056025185417}
   roiP2: {fileID: 7589295056292898379}
+  samuraP1: {fileID: 6826203867662978527}
+  samuraP2: {fileID: 6826203867479258406}
   EndUi: {fileID: 85442204}
   TEXTwIN: {fileID: 1813447740}
   pionDeadForP1: []

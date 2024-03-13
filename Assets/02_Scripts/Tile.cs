@@ -113,7 +113,7 @@ public class Tile : MonoBehaviour
                 {
                     tileManager.pionUse.transform.position = pionTransform;
 
-                    if (tileManager.turnbot)
+                    if (tileManager.turnbot)// Player 1
                     {
                         pionOnMe.GetComponent<Pion>().isDead = true;
 
@@ -135,7 +135,18 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
                             pionOnMe.transform.rotation = Quaternion.Euler(0,180,0);
                             pionOnMe.GetComponent<Pion>().tiles = null;
+                            if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama")
+                            {
+                                tileManager.pionPlayerBot.Add(tileManager.samuraP2);
+                                tileManager.pionPlayerTop.Remove(tileManager.samuraP2);
+                                tileManager.samuraP2.GetComponent<Pion>().bot = true;
+                                tileManager.samuraP2.GetComponent<Renderer>().material = tileManager.samuraP2.GetComponent<Pion>().p1;
+                                tileManager.samuraP2.transform.rotation = Quaternion.Euler(0, 180, 0);
+                                tileManager.samuraP2.GetComponent<Pion>().tiles = null;
+                            }
 
+
+                            Debug.Log("samuuuuraaaa AAAA");
 
                             for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
                             {
@@ -155,18 +166,27 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 180, 0);
                             pionOnMe.GetComponent<Pion>().tiles = null;
+                            if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama")
+                            {
+                                tileManager.pionPlayerBot.Add(tileManager.samuraP2);
+                                tileManager.pionPlayerTop.Remove(tileManager.samuraP2);
+                                tileManager.samuraP2.GetComponent<Pion>().bot = true;
+                                tileManager.samuraP2.GetComponent<Renderer>().material = tileManager.samuraP2.GetComponent<Pion>().p1;
+                                tileManager.samuraP2.transform.rotation = Quaternion.Euler(0, 180, 0);
+                                tileManager.samuraP2.GetComponent<Pion>().tiles = null;
+                            }
                             //Debug.Log("uiiiiiiiiiiiiiiiiiii");
 
                             for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
                             {
                                 tileManager.pionDeadForP1[i].transform.position = tileManager.cimP1[i].transform.position;
                             }
-                          
+                            Debug.Log("samuuuuraaaa BBBB");
                         }
 
                         
                     }
-                    else
+                    else //Player 2
                     {
                         if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama Samura")
                         {
@@ -186,6 +206,15 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 0, 0);
                             pionOnMe.GetComponent<Pion>().tiles = null;
+                            if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama")
+                            {
+                                tileManager.pionPlayerTop.Add(tileManager.samuraP1);
+                                tileManager.pionPlayerBot.Remove(tileManager.samuraP1);
+                                tileManager.samuraP1.GetComponent<Pion>().bot = false;
+                                tileManager.samuraP1.GetComponent<Renderer>().material = tileManager.samuraP1.GetComponent<Pion>().p2;
+                                tileManager.samuraP1.transform.rotation = Quaternion.Euler(0, 0, 0);
+                                tileManager.samuraP1.GetComponent<Pion>().tiles = null;
+                            }
 
                             for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
                             {
@@ -208,6 +237,15 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 0, 0);
                             pionOnMe.GetComponent<Pion>().tiles = null;
+                            if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama")
+                            {
+                                tileManager.pionPlayerTop.Add(tileManager.samuraP1);
+                                tileManager.pionPlayerBot.Remove(tileManager.samuraP1);
+                                tileManager.samuraP1.GetComponent<Pion>().bot = false;
+                                tileManager.samuraP1.GetComponent<Renderer>().material = tileManager.samuraP1.GetComponent<Pion>().p2;
+                                tileManager.samuraP1.transform.rotation = Quaternion.Euler(0, 0, 0);
+                                tileManager.samuraP1.GetComponent<Pion>().tiles = null;
+                            }
 
 
                             for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
@@ -234,6 +272,7 @@ public class Tile : MonoBehaviour
                     {
                         tileManager.moovP2.Add("" + pionOnMe.GetComponent<Pion>().pionSO.pionName + Id);
                     }
+                    Debug.Log("samuuuuraaaa CCCC");
 
                     pionOnMe.GetComponent<Pion>().KickHoldTile();
 
@@ -275,13 +314,13 @@ public class Tile : MonoBehaviour
                     pionOnMe.GetComponent<Pion>().isDead = false;
                     
 
+
+
                     Debug.Log("yaaa c'est ici !!!");
-                    //pionOnMe.GetComponent<Pion>().KickHoldTile();
 
 
-                    tileManager.EndTurn();
 
-                    
+                    tileManager.EndTurn();                   
                 }
                 else
                 {
