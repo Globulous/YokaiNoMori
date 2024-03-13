@@ -10,6 +10,11 @@ public class TileManager : MonoBehaviour
     public GameObject[] cimP1;
     public GameObject[] cimP2;
 
+    public GameObject roiP1;
+    public GameObject roiP2;
+    public GameObject EndUi;
+    public TextMeshProUGUI TEXTwIN;
+
     public List<GameObject> pionDeadForP1 = new List<GameObject>();
     public List<GameObject> pionDeadForP2 = new List<GameObject>();
 
@@ -20,6 +25,9 @@ public class TileManager : MonoBehaviour
     public List<Pion> pionPlayerBot = new List<Pion>();
     public List<Pion> pionPlayerTop = new List<Pion>();
 
+    public List<string> moovP1 = new List<string>();
+    public List<string> moovP2 = new List<string>();
+
     public bool actionPion = false;
     public GameObject pionUse;
 
@@ -29,6 +37,43 @@ public class TileManager : MonoBehaviour
     {
         FindEmptyTiles();
         switchPionActive();
+        Time.timeScale = 1f;
+    }
+
+    public void FixedUpdate()
+    {
+        if (roiP1.GetComponent<Pion>().isDead)
+        {
+            Time.timeScale = 0;
+            EndUi.SetActive(true);
+            TEXTwIN.text = "Player 2 Win";
+        }
+
+        if (roiP2.GetComponent<Pion>().isDead)
+        {
+            Time.timeScale = 0;
+            EndUi.SetActive(true);
+            TEXTwIN.text = "Player 1 Win";
+        }
+
+        
+    }
+
+    void checkMoov()//Check for matchNull
+    {
+        if (moovP1.Count == 6 && moovP2.Count == 6)
+        {
+            if (moovP1[0] == moovP1[2] && moovP1[2] == moovP1[4] && moovP1[1] == moovP1[5])
+            {
+                if (moovP2[0] == moovP2[2] && moovP2[2] == moovP2[4] && moovP2[1] == moovP2[5])
+                {
+                    Time.timeScale = 0;
+                    EndUi.SetActive(true);
+                    TEXTwIN.text = "Match Null";
+                }
+            }
+        }
+        
     }
 
     public void FindEmptyTiles()
@@ -47,6 +92,19 @@ public class TileManager : MonoBehaviour
                 tilesEmpty.Add(tiles[i]);
             }
 
+        }
+    }
+
+    public void CheckTileEmptyInGame()
+    {
+        tilesEmpty.Clear();
+
+        for (int i = 0; i < tiles.Length; i++)
+        {
+            if (tiles[i].pionOnMe == null)
+            {
+                tilesEmpty.Add(tiles[i]);
+            }
         }
     }
 
@@ -89,6 +147,8 @@ public class TileManager : MonoBehaviour
 
     public void EndTurn()
     {
+        checkMoov();
+
         ResetAllTileMatt();
 
         turnbot = !turnbot;
@@ -103,6 +163,7 @@ public class TileManager : MonoBehaviour
         }
 
         switchPionActive();
+        
 
         pionUse = null;
         actionPion = false;

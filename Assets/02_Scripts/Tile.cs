@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    public int Id;
+
     public bool imEmpty;
     public Vector3 pionTransform;
 
@@ -52,6 +54,8 @@ public class Tile : MonoBehaviour
     private void FixedUpdate()
     {
         CheckTile();
+
+        
     }
 
     public void CheckTile()
@@ -115,22 +119,100 @@ public class Tile : MonoBehaviour
                     {
                         pionOnMe.GetComponent<Pion>().isDead = true;
 
-                        tileManager.pionDeadForP1.Add(pionOnMe);
-
-                        for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
+                        if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama Samura")
                         {
-                            tileManager.pionDeadForP1[i].transform.position = tileManager.cimP1[i].transform.position;
+                            pionOnMe.transform.position = tileManager.pionPlayerTop[1].transform.position;//Swap kodama samira en kodama
+
+                            pionOnMe.SetActive(false);
+                            tileManager.pionPlayerTop[1].gameObject.SetActive(true);
+
+                            pionOnMe = tileManager.pionPlayerTop[1].gameObject;
+
+                            tileManager.pionDeadForP1.Add(pionOnMe);
+
+                            //Change camp P2 to P1
+                            tileManager.pionPlayerBot.Add(pionOnMe.GetComponent<Pion>());
+                            tileManager.pionPlayerTop.Remove(pionOnMe.GetComponent<Pion>());
+                            pionOnMe.GetComponent<Pion>().bot = true;
+                            pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
+                            pionOnMe.transform.rotation = Quaternion.Euler(0,180,0);
+
+
+
+                            for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
+                            {
+                                tileManager.pionDeadForP1[i].transform.position = tileManager.cimP1[i].transform.position;
+                            }
+
+                            
                         }
+                        else
+                        {
+                            tileManager.pionDeadForP1.Add(pionOnMe);
+
+                            //Change camp P2 to P1
+                            tileManager.pionPlayerBot.Add(pionOnMe.GetComponent<Pion>());
+                            tileManager.pionPlayerTop.Remove(pionOnMe.GetComponent<Pion>());
+                            pionOnMe.GetComponent<Pion>().bot = true;
+                            pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
+                            pionOnMe.transform.rotation = Quaternion.Euler(0, 180, 0);
+                            //Debug.Log("uiiiiiiiiiiiiiiiiiii");
+
+                            for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
+                            {
+                                tileManager.pionDeadForP1[i].transform.position = tileManager.cimP1[i].transform.position;
+                            }
+                          
+                        }
+
+                        
                     }
                     else
                     {
-                        pionOnMe.GetComponent<Pion>().isDead = true;
-
-                        tileManager.pionDeadForP2.Add(pionOnMe);
-
-                        for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
+                        if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama Samura")
                         {
-                            tileManager.pionDeadForP2[i].transform.position = tileManager.cimP2[i].transform.position;
+                            pionOnMe.transform.position = tileManager.pionPlayerBot[1].transform.position;//Swap kodama samira en kodama
+
+                            pionOnMe.SetActive(false);
+                            tileManager.pionPlayerBot[1].gameObject.SetActive(true);
+
+                            pionOnMe = tileManager.pionPlayerBot[1].gameObject;
+
+                            tileManager.pionDeadForP2.Add(pionOnMe);
+
+                            //Change camp P1 to P2
+                            tileManager.pionPlayerTop.Add(pionOnMe.GetComponent<Pion>());
+                            tileManager.pionPlayerBot.Remove(pionOnMe.GetComponent<Pion>());
+                            pionOnMe.GetComponent<Pion>().bot = false;
+                            pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
+                            pionOnMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                            for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
+                            {
+                                tileManager.pionDeadForP2[i].transform.position = tileManager.cimP2[i].transform.position;
+                            }
+
+  
+                        }
+                        else
+                        {
+                            
+                            pionOnMe.GetComponent<Pion>().isDead = true;
+
+                            tileManager.pionDeadForP2.Add(pionOnMe);
+
+                            //Change camp P1 to P2
+                            tileManager.pionPlayerTop.Add(pionOnMe.GetComponent<Pion>());
+                            tileManager.pionPlayerBot.Remove(pionOnMe.GetComponent<Pion>());
+                            pionOnMe.GetComponent<Pion>().bot = false;
+                            pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
+                            pionOnMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+                            
+
+                            for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
+                            {
+                                tileManager.pionDeadForP2[i].transform.position = tileManager.cimP2[i].transform.position;
+                            }
                         }
                     }
                     
@@ -143,13 +225,23 @@ public class Tile : MonoBehaviour
 
                     pionOnMe.GetComponent<Pion>().tiles = this.gameObject;
 
+                    if (tileManager.turnbot)//Add for match null
+                    {
+                        tileManager.moovP1.Add("" + pionOnMe.GetComponent<Pion>().pionSO.pionName + Id);
+                    }
+                    else
+                    {
+                        tileManager.moovP2.Add("" + pionOnMe.GetComponent<Pion>().pionSO.pionName + Id);
+                    }
+                    
+
                     tileManager.EndTurn();
 
                 }              
             }
             else
             {
-                if (imEmpty)
+                if (imEmpty)//respawn after death
                 {
                     tileManager.pionUse.transform.position = pionTransform;
 
@@ -158,6 +250,19 @@ public class Tile : MonoBehaviour
                     pionOnMe = tileManager.pionUse;
 
                     pionOnMe.GetComponent<Pion>().tiles = this.gameObject;
+
+                    if (tileManager.turnbot)//Add for match null 
+                    {
+                        tileManager.moovP1.Add("" + pionOnMe.GetComponent<Pion>().pionSO.pionName + Id);
+                    }
+                    else
+                    {
+                        tileManager.moovP2.Add("" + pionOnMe.GetComponent<Pion>().pionSO.pionName + Id);
+                    }
+
+                    pionOnMe.GetComponent<Pion>().isDead = false;
+
+                    Debug.Log("yaaa c'est ici !!!");
 
                     tileManager.EndTurn();
                 }
