@@ -169,6 +169,8 @@ public class TileManager : MonoBehaviour
 
     public void EndTurn()
     {
+        RefoundTiles();
+
         checkMoov();
 
         ResetAllTileMatt();

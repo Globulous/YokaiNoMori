@@ -136,7 +136,7 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Pion>().bot = true;
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
                             pionOnMe.transform.rotation = Quaternion.Euler(0,180,0);
-
+                            pionOnMe.GetComponent<Pion>().tiles = null;
 
 
                             for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
@@ -146,7 +146,7 @@ public class Tile : MonoBehaviour
 
                             
                         }
-                        else
+                        else//jeu mormal
                         {
                             tileManager.pionDeadForP1.Add(pionOnMe);
 
@@ -156,6 +156,7 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Pion>().bot = true;
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 180, 0);
+                            pionOnMe.GetComponent<Pion>().tiles = null;
                             //Debug.Log("uiiiiiiiiiiiiiiiiiii");
 
                             for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
@@ -186,6 +187,7 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Pion>().bot = false;
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 0, 0);
+                            pionOnMe.GetComponent<Pion>().tiles = null;
 
                             for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
                             {
@@ -207,7 +209,8 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Pion>().bot = false;
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 0, 0);
-                            
+                            pionOnMe.GetComponent<Pion>().tiles = null;
+
 
                             for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
                             {
@@ -233,7 +236,8 @@ public class Tile : MonoBehaviour
                     {
                         tileManager.moovP2.Add("" + pionOnMe.GetComponent<Pion>().pionSO.pionName + Id);
                     }
-                    
+
+                    pionOnMe.GetComponent<Pion>().KickHoldTile();
 
                     tileManager.EndTurn();
 
@@ -245,7 +249,7 @@ public class Tile : MonoBehaviour
                 {
                     tileManager.pionUse.transform.position = pionTransform;
 
-                    tileManager.pionUse.GetComponent<Pion>().DeplacementAction();
+                    //tileManager.pionUse.GetComponent<Pion>().DeplacementAction();
 
                     pionOnMe = tileManager.pionUse;
 
@@ -274,6 +278,8 @@ public class Tile : MonoBehaviour
                     
 
                     Debug.Log("yaaa c'est ici !!!");
+                    //pionOnMe.GetComponent<Pion>().KickHoldTile();
+
 
                     tileManager.EndTurn();
 

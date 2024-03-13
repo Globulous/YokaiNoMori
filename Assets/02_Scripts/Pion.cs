@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -21,12 +22,14 @@ public class Pion : MonoBehaviour
     public Material p1;
     public Material p2;
 
+    public GameObject holdTile;
+
 
     public void OnMouseDown()
     {
         tileManager.ResetAllTileMatt();
 
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
 
         if (isDead)
         {
@@ -192,7 +195,7 @@ public class Pion : MonoBehaviour
                         tiles.GetComponent<Tile>().tileForwardRight.GetComponent<Tile>().Usable();
                     }
 
-
+                    
                 }
                 else
                 {
@@ -327,6 +330,7 @@ public class Pion : MonoBehaviour
             }
         }
 
+        holdTile = tiles;
         tileManager.RefoundTiles();
     }
 
@@ -424,5 +428,10 @@ public class Pion : MonoBehaviour
     public void DeplacementAction()
     {
         tiles.GetComponent<Tile>().pionOnMe = null;  
+    }
+
+    public void KickHoldTile()
+    {
+        holdTile.GetComponent<Tile>().pionOnMe = null;
     }
 }
