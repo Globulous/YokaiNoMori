@@ -120,9 +120,9 @@ public class Tile : MonoBehaviour
                         if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama Samura")
                         {
                             pionOnMe.SetActive(false);
+                            pionOnMe.GetComponent<Pion>().isDead = true;
 
-
-                            tileManager.pionDeadForP1.Add(pionOnMe);
+                            
 
                             //Change camp P2 to P1
                             tileManager.pionPlayerBot.Add(pionOnMe.GetComponent<Pion>());
@@ -145,28 +145,33 @@ public class Tile : MonoBehaviour
                             {
                                 tileManager.koramaP1.gameObject.transform.position = pionOnMe.transform.position;
                                 tileManager.koramaP1.gameObject.SetActive(true);
+                                tileManager.koramaP1.isDead = true;
 
                                 tileManager.pionPlayerBot.Add(tileManager.koramaP1);
                                 tileManager.pionPlayerTop.Remove(tileManager.koramaP1);
                                 tileManager.koramaP1.GetComponent<Pion>().bot = true;
-                                tileManager.koramaP1.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
+                                tileManager.koramaP1.GetComponent<Renderer>().material = tileManager.koramaP1.GetComponent<Pion>().p1;
                                 tileManager.koramaP1.transform.rotation = Quaternion.Euler(0, 180, 0);
                                 tileManager.koramaP1.GetComponent<Pion>().tiles = null;
                                 tileManager.koramaP1.GetComponent<Pion>().tiles = null;
+
 
                             }
                             else if (pionOnMe.name == "KodamaSamurai P2")
                             {
                                 tileManager.koramaP2.gameObject.transform.position = pionOnMe.transform.position;
                                 tileManager.koramaP2.gameObject.SetActive(true);
+                                tileManager.koramaP2.isDead = true;
 
                                 tileManager.pionPlayerBot.Add(tileManager.koramaP2);
                                 tileManager.pionPlayerTop.Remove(tileManager.koramaP2);
                                 tileManager.koramaP2.GetComponent<Pion>().bot = true;
-                                tileManager.koramaP2.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
+                                tileManager.koramaP2.GetComponent<Renderer>().material = tileManager.koramaP2.GetComponent<Pion>().p1;
                                 tileManager.koramaP2.transform.rotation = Quaternion.Euler(0, 180, 0);
                                 tileManager.koramaP2.GetComponent<Pion>().tiles = null;
                                 tileManager.koramaP2.GetComponent<Pion>().tiles = null;
+
+
                             }
 
 
@@ -174,6 +179,8 @@ public class Tile : MonoBehaviour
                         else//jeu mormal
                         {
                             tileManager.pionDeadForP1.Add(pionOnMe);
+
+                            pionOnMe.GetComponent<Pion>().isDead = true;
 
                             //Change camp P2 to P1
                             tileManager.pionPlayerBot.Add(pionOnMe.GetComponent<Pion>());
@@ -207,8 +214,9 @@ public class Tile : MonoBehaviour
                     {
                         if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama Samura")
                         {
-                            pionOnMe.SetActive(false);
+                            
 
+                            pionOnMe.GetComponent<Pion>().isDead = true;
 
                             tileManager.pionDeadForP2.Add(pionOnMe);
 
@@ -230,27 +238,33 @@ public class Tile : MonoBehaviour
                             {
                                 tileManager.koramaP1.gameObject.transform.position = pionOnMe.transform.position;
                                 tileManager.koramaP1.gameObject.SetActive(true);
+                                tileManager.koramaP1.isDead = true;
 
                                 tileManager.pionPlayerTop.Add(tileManager.koramaP1);
                                 tileManager.pionPlayerBot.Remove(tileManager.koramaP1);
                                 tileManager.koramaP1.GetComponent<Pion>().bot = false;
-                                tileManager.koramaP1.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
+                                tileManager.koramaP1.GetComponent<Renderer>().material = tileManager.koramaP1.GetComponent<Pion>().p2;
                                 tileManager.koramaP1.transform.rotation = Quaternion.Euler(0, 0, 0);
                                 tileManager.koramaP1.GetComponent<Pion>().tiles = null;
+
+                                Debug.Log("eclataxe 3000");
                             }
                             else if (pionOnMe.name == "KodamaSamurai P2")
                             {
                                 tileManager.koramaP2.gameObject.transform.position = pionOnMe.transform.position;
                                 tileManager.koramaP2.gameObject.SetActive(true);
+                                tileManager.koramaP2.isDead = true;
 
                                 tileManager.pionPlayerTop.Add(tileManager.koramaP2);
                                 tileManager.pionPlayerBot.Remove(tileManager.koramaP2);
                                 tileManager.koramaP2.GetComponent<Pion>().bot = false;
-                                tileManager.koramaP2.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
+                                tileManager.koramaP2.GetComponent<Renderer>().material = tileManager.koramaP2.GetComponent<Pion>().p2;
                                 tileManager.koramaP2.transform.rotation = Quaternion.Euler(0, 0, 0);
                                 tileManager.koramaP2.GetComponent<Pion>().tiles = null;
-                            }  
 
+                            }
+
+                            pionOnMe.SetActive(false);
                             Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
       
                         }
@@ -345,12 +359,7 @@ public class Tile : MonoBehaviour
 
                     pionOnMe.GetComponent<Pion>().isDead = false;
                     
-
-
-
                     Debug.Log("yaaa c'est ici !!!");
-
-
 
                     tileManager.EndTurn();                   
                 }

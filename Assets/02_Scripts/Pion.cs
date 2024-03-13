@@ -340,40 +340,76 @@ public class Pion : MonoBehaviour
     {
         if (!isDead && !transformation) 
         {
-            if (pionSO.pionName == "Kodama" && bot == true && tiles.GetComponent<Tile>().Id == 10)
+            if (this.gameObject.name == "Kodama P1" && bot == true && tiles.GetComponent<Tile>().Id == 10)
             {
-                tileManager.pionPlayerBot[4].GetComponent<GameObject>().transform.position = this.transform.position;//Swap le kodama avec le kodama samura
+                tileManager.samuraP1.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
 
-                tileManager.pionPlayerBot[4].GetComponent<Pion>().tiles = tiles;
-                tiles.GetComponent<Tile>().pionOnMe = tileManager.pionPlayerBot[4].gameObject;
+                tileManager.samuraP1.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP1.gameObject;
 
-                tileManager.pionPlayerBot[4].gameObject.SetActive(true);
+                tileManager.samuraP1.gameObject.SetActive(true);
+                this.gameObject.SetActive(false);
+
+                transformation = true;
+            }
+            if (this.gameObject.name == "Kodama P2" && bot == true && tiles.GetComponent<Tile>().Id == 10)
+            {
+                tileManager.samuraP2.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
+
+                tileManager.samuraP2.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP2.gameObject;
+
+                tileManager.samuraP2.gameObject.SetActive(true);
                 this.gameObject.SetActive(false);
 
                 transformation = true;
             }
 
-            if (pionSO.pionName == "Kodama" && bot == true && tiles.GetComponent<Tile>().Id == 11)
+            if (this.gameObject.name == "Kodama P1" && bot == true && tiles.GetComponent<Tile>().Id == 11)
             {
-                tileManager.pionPlayerBot[4].GetComponent<Transform>().position = this.transform.position;
+                tileManager.samuraP1.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
 
-                tileManager.pionPlayerBot[4].GetComponent<Pion>().tiles = tiles;
-                tiles.GetComponent<Tile>().pionOnMe = tileManager.pionPlayerBot[4].gameObject;
+                tileManager.samuraP1.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP1.gameObject;
 
-                tileManager.pionPlayerBot[4].gameObject.SetActive(true);
+                tileManager.samuraP1.gameObject.SetActive(true);
+                this.gameObject.SetActive(false);
+
+                transformation = true;
+            }
+            if (this.gameObject.name == "Kodama P2" && bot == true && tiles.GetComponent<Tile>().Id == 11)
+            {
+                tileManager.samuraP2.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
+
+                tileManager.samuraP2.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP2.gameObject;
+
+                tileManager.samuraP2.gameObject.SetActive(true);
                 this.gameObject.SetActive(false);
 
                 transformation = true;
             }
 
-            if (pionSO.pionName == "Kodama" && bot == true && tiles.GetComponent<Tile>().Id == 12)
+            if (this.gameObject.name == "Kodama P1" && bot == true && tiles.GetComponent<Tile>().Id == 12)
             {
-                tileManager.pionPlayerBot[4].GetComponent<Transform>().position = this.transform.position;
+                tileManager.samuraP1.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
 
-                tileManager.pionPlayerBot[4].GetComponent<Pion>().tiles = tiles;
-                tiles.GetComponent<Tile>().pionOnMe = tileManager.pionPlayerBot[4].gameObject;
+                tileManager.samuraP1.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP1.gameObject;
 
-                tileManager.pionPlayerBot[4].gameObject.SetActive(true);
+                tileManager.samuraP1.gameObject.SetActive(true);
+                this.gameObject.SetActive(false);
+
+                transformation = true;
+            }
+            if (this.gameObject.name == "Kodama P2" && bot == true && tiles.GetComponent<Tile>().Id == 12)
+            {
+                tileManager.samuraP2.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
+
+                tileManager.samuraP2.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP2.gameObject;
+
+                tileManager.samuraP2.gameObject.SetActive(true);
                 this.gameObject.SetActive(false);
 
                 transformation = true;
@@ -381,48 +417,84 @@ public class Pion : MonoBehaviour
 
 
 
-            if (pionSO.pionName == "Kodama" && bot == false && tiles.GetComponent<Tile>().Id == 1)
+            if (this.gameObject.name == "Kodama P1" && bot == true && tiles.GetComponent<Tile>().Id == 1)
             {
-                tileManager.pionPlayerTop[4].GetComponent<Transform>().position = this.transform.position;
+                tileManager.samuraP1.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
 
-                tileManager.pionPlayerTop[4].GetComponent<Pion>().tiles = tiles;
-                tiles.GetComponent<Tile>().pionOnMe = tileManager.pionPlayerTop[4].gameObject;
+                tileManager.samuraP1.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP1.gameObject;
 
-                tileManager.pionPlayerTop[4].gameObject.SetActive (true);
+                tileManager.samuraP1.gameObject.SetActive(true);
+                this.gameObject.SetActive(false);
+
+                transformation = true;
+            }
+            if (this.gameObject.name == "Kodama P2" && bot == true && tiles.GetComponent<Tile>().Id == 1)
+            {
+                tileManager.samuraP2.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
+
+                tileManager.samuraP2.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP2.gameObject;
+
+                tileManager.samuraP2.gameObject.SetActive(true);
                 this.gameObject.SetActive(false);
 
                 transformation = true;
             }
 
-            if (pionSO.pionName == "Kodama" && bot == false && tiles.GetComponent<Tile>().Id == 2)
+            if (this.gameObject.name == "Kodama P1" && bot == true && tiles.GetComponent<Tile>().Id == 2)
             {
-                tileManager.pionPlayerTop[4].GetComponent<Transform>().position = this.transform.position;
+                tileManager.samuraP1.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
 
-                tileManager.pionPlayerTop[4].GetComponent<Pion>().tiles = tiles;
-                tiles.GetComponent<Tile>().pionOnMe = tileManager.pionPlayerTop[4].gameObject;
+                tileManager.samuraP1.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP1.gameObject;
 
-                tileManager.pionPlayerTop[4].gameObject.SetActive(true);
+                tileManager.samuraP1.gameObject.SetActive(true);
+                this.gameObject.SetActive(false);
+
+                transformation = true;
+            }
+            if (this.gameObject.name == "Kodama P2" && bot == true && tiles.GetComponent<Tile>().Id == 2)
+            {
+                tileManager.samuraP2.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
+
+                tileManager.samuraP2.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP2.gameObject;
+
+                tileManager.samuraP2.gameObject.SetActive(true);
                 this.gameObject.SetActive(false);
 
                 transformation = true;
             }
 
-            if (pionSO.pionName == "Kodama" && bot == false && tiles.GetComponent<Tile>().Id == 3)
+            if (this.gameObject.name == "Kodama P1" && bot == true && tiles.GetComponent<Tile>().Id == 3)
             {
-                tileManager.pionPlayerTop[4].GetComponent<Transform>().position = this.transform.position;
+                tileManager.samuraP1.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
 
-                tileManager.pionPlayerTop[4].GetComponent<Pion>().tiles = tiles;
-                tiles.GetComponent<Tile>().pionOnMe = tileManager.pionPlayerTop[4].gameObject;
+                tileManager.samuraP1.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP1.gameObject;
 
-                tileManager.pionPlayerTop[4].gameObject.SetActive(true);
+                tileManager.samuraP1.gameObject.SetActive(true);
+                this.gameObject.SetActive(false);
+
+                transformation = true;
+            }
+            if (this.gameObject.name == "Kodama P2" && bot == true && tiles.GetComponent<Tile>().Id == 3)
+            {
+                tileManager.samuraP2.gameObject.transform.position = this.transform.position;//Swap le kodama avec le kodama samura
+
+                tileManager.samuraP2.GetComponent<Pion>().tiles = tiles;
+                tiles.GetComponent<Tile>().pionOnMe = tileManager.samuraP2.gameObject;
+
+                tileManager.samuraP2.gameObject.SetActive(true);
                 this.gameObject.SetActive(false);
 
                 transformation = true;
             }
 
-            
 
-            
+
+
         }
         
     }
