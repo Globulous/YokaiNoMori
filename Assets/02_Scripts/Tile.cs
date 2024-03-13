@@ -84,8 +84,9 @@ public class Tile : MonoBehaviour
             //pionOnMe = hit.collider.GetComponent<GameObject>();
         }
 
+
         // Debug dessiner le rayon
-        Debug.DrawRay(raycastOrigin, Vector3.up * raycastDistance, Color.red);
+        //Debug.DrawRay(raycastOrigin, Vector3.up * raycastDistance, Color.red);
     }
 
     public void Usable()

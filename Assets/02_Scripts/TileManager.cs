@@ -187,7 +187,8 @@ public class TileManager : MonoBehaviour
         }
 
         switchPionActive();
-        
+
+        pionUse.GetComponent<Pion>().KickHoldTile();
 
         pionUse = null;
         actionPion = false;

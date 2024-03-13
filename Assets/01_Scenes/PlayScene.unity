@@ -143,6 +143,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: 39ee6960a53a8cc4cafe665519b6325c, type: 2}
   p2: {fileID: 2100000, guid: 79ef21c7bc9e64249868f2471f9bc163, type: 2}
+  holdTile: {fileID: 0}
 --- !u!1 &46991215
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +412,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: 1807e743faaab4a48badf2711cc4eda1, type: 2}
   p2: {fileID: 2100000, guid: 417c23f89a08c6f4885946be7f027cd7, type: 2}
+  holdTile: {fileID: 0}
 --- !u!114 &115941126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +433,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: f8eb5461f9d1cf44984a7875aac98da2, type: 2}
   p2: {fileID: 2100000, guid: 742bba4743f7eeb44b16ad83f9d0eee7, type: 2}
+  holdTile: {fileID: 0}
 --- !u!1 &140325029
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +608,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -868,6 +871,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: 1807e743faaab4a48badf2711cc4eda1, type: 2}
   p2: {fileID: 2100000, guid: 417c23f89a08c6f4885946be7f027cd7, type: 2}
+  holdTile: {fileID: 0}
 --- !u!1 &415342158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1031,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: 3d5dca23e1688c547aaa4916101cbbc5, type: 2}
   p2: {fileID: 2100000, guid: 8184cae9d6d962c4d944c584f08c1b6f, type: 2}
+  holdTile: {fileID: 0}
 --- !u!1 &546986881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1420,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: 39ee6960a53a8cc4cafe665519b6325c, type: 2}
   p2: {fileID: 2100000, guid: 79ef21c7bc9e64249868f2471f9bc163, type: 2}
+  holdTile: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,6 +1535,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: 3d5dca23e1688c547aaa4916101cbbc5, type: 2}
   p2: {fileID: 2100000, guid: 8184cae9d6d962c4d944c584f08c1b6f, type: 2}
+  holdTile: {fileID: 0}
 --- !u!1 &794731606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,6 +2416,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: f8eb5461f9d1cf44984a7875aac98da2, type: 2}
   p2: {fileID: 2100000, guid: 742bba4743f7eeb44b16ad83f9d0eee7, type: 2}
+  holdTile: {fileID: 0}
 --- !u!1 &1114224059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4746,6 +4754,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: 370ae4708f489354fa5f74e4cfe3bbaa, type: 2}
   p2: {fileID: 2100000, guid: b799f8c22bfdb1342aa79e0fa750256d, type: 2}
+  holdTile: {fileID: 0}
 --- !u!1 &6826203867662978526
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,6 +4795,7 @@ MonoBehaviour:
   transformation: 0
   p1: {fileID: 2100000, guid: 370ae4708f489354fa5f74e4cfe3bbaa, type: 2}
   p2: {fileID: 2100000, guid: b799f8c22bfdb1342aa79e0fa750256d, type: 2}
+  holdTile: {fileID: 0}
 --- !u!65 &6998767662114279655
 BoxCollider:
   m_ObjectHideFlags: 0
