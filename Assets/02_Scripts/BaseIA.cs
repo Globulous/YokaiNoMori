@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class BaseIA : MonoBehaviour
 {
-    public TileManager tileManager;
+   /* public TileManager tileManager;
     public int maxDepth = 3; // Profondeur maximale pour la recherche Minimax
 
     private void Start()
@@ -287,7 +287,7 @@ public class BaseIA : MonoBehaviour
 
         // Retourner le score de sécurité normalisé entre 0 et 1
         return Mathf.Clamp01(safetyScore);
-    }
+    }*/
 
 
 }
