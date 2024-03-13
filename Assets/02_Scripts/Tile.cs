@@ -119,12 +119,8 @@ public class Tile : MonoBehaviour
 
                         if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama Samura")
                         {
-                            pionOnMe.transform.position = tileManager.pionPlayerTop[1].transform.position;//Swap kodama samira en kodama
-
                             pionOnMe.SetActive(false);
-                            tileManager.pionPlayerTop[1].gameObject.SetActive(true);
 
-                            pionOnMe = tileManager.pionPlayerTop[1].gameObject;
 
                             tileManager.pionDeadForP1.Add(pionOnMe);
 
@@ -135,25 +131,45 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
                             pionOnMe.transform.rotation = Quaternion.Euler(0,180,0);
                             pionOnMe.GetComponent<Pion>().tiles = null;
-                            if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama")
-                            {
-                                tileManager.pionPlayerBot.Add(tileManager.samuraP2);
-                                tileManager.pionPlayerTop.Remove(tileManager.samuraP2);
-                                tileManager.samuraP2.GetComponent<Pion>().bot = true;
-                                tileManager.samuraP2.GetComponent<Renderer>().material = tileManager.samuraP2.GetComponent<Pion>().p1;
-                                tileManager.samuraP2.transform.rotation = Quaternion.Euler(0, 180, 0);
-                                tileManager.samuraP2.GetComponent<Pion>().tiles = null;
-                            }
+                            pionOnMe.GetComponent<Pion>().tiles = null;
 
 
-                            Debug.Log("samuuuuraaaa AAAA");
+                            Debug.Log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
 
                             for (int i = 0; i < tileManager.pionDeadForP1.Count; i++)
                             {
                                 tileManager.pionDeadForP1[i].transform.position = tileManager.cimP1[i].transform.position;
                             }
 
-                            
+                            if (pionOnMe.name == "KodamaSamurai P1")
+                            {
+                                tileManager.koramaP1.gameObject.transform.position = pionOnMe.transform.position;
+                                tileManager.koramaP1.gameObject.SetActive(true);
+
+                                tileManager.pionPlayerBot.Add(tileManager.koramaP1);
+                                tileManager.pionPlayerTop.Remove(tileManager.koramaP1);
+                                tileManager.koramaP1.GetComponent<Pion>().bot = true;
+                                tileManager.koramaP1.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
+                                tileManager.koramaP1.transform.rotation = Quaternion.Euler(0, 180, 0);
+                                tileManager.koramaP1.GetComponent<Pion>().tiles = null;
+                                tileManager.koramaP1.GetComponent<Pion>().tiles = null;
+
+                            }
+                            else if (pionOnMe.name == "KodamaSamurai P2")
+                            {
+                                tileManager.koramaP2.gameObject.transform.position = pionOnMe.transform.position;
+                                tileManager.koramaP2.gameObject.SetActive(true);
+
+                                tileManager.pionPlayerBot.Add(tileManager.koramaP2);
+                                tileManager.pionPlayerTop.Remove(tileManager.koramaP2);
+                                tileManager.koramaP2.GetComponent<Pion>().bot = true;
+                                tileManager.koramaP2.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
+                                tileManager.koramaP2.transform.rotation = Quaternion.Euler(0, 180, 0);
+                                tileManager.koramaP2.GetComponent<Pion>().tiles = null;
+                                tileManager.koramaP2.GetComponent<Pion>().tiles = null;
+                            }
+
+
                         }
                         else//jeu mormal
                         {
@@ -166,6 +182,7 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p1;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 180, 0);
                             pionOnMe.GetComponent<Pion>().tiles = null;
+
                             if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama")
                             {
                                 tileManager.pionPlayerBot.Add(tileManager.samuraP2);
@@ -190,12 +207,8 @@ public class Tile : MonoBehaviour
                     {
                         if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama Samura")
                         {
-                            pionOnMe.transform.position = tileManager.pionPlayerBot[1].transform.position;//Swap kodama samira en kodama
-
                             pionOnMe.SetActive(false);
-                            tileManager.pionPlayerBot[1].gameObject.SetActive(true);
 
-                            pionOnMe = tileManager.pionPlayerBot[1].gameObject;
 
                             tileManager.pionDeadForP2.Add(pionOnMe);
 
@@ -206,22 +219,40 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 0, 0);
                             pionOnMe.GetComponent<Pion>().tiles = null;
-                            if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama")
-                            {
-                                tileManager.pionPlayerTop.Add(tileManager.samuraP1);
-                                tileManager.pionPlayerBot.Remove(tileManager.samuraP1);
-                                tileManager.samuraP1.GetComponent<Pion>().bot = false;
-                                tileManager.samuraP1.GetComponent<Renderer>().material = tileManager.samuraP1.GetComponent<Pion>().p2;
-                                tileManager.samuraP1.transform.rotation = Quaternion.Euler(0, 0, 0);
-                                tileManager.samuraP1.GetComponent<Pion>().tiles = null;
-                            }
+
 
                             for (int i = 0; i < tileManager.pionDeadForP2.Count; i++)
                             {
                                 tileManager.pionDeadForP2[i].transform.position = tileManager.cimP2[i].transform.position;
                             }
 
-  
+                            if (pionOnMe.name == "KodamaSamurai P1")
+                            {
+                                tileManager.koramaP1.gameObject.transform.position = pionOnMe.transform.position;
+                                tileManager.koramaP1.gameObject.SetActive(true);
+
+                                tileManager.pionPlayerTop.Add(tileManager.koramaP1);
+                                tileManager.pionPlayerBot.Remove(tileManager.koramaP1);
+                                tileManager.koramaP1.GetComponent<Pion>().bot = false;
+                                tileManager.koramaP1.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
+                                tileManager.koramaP1.transform.rotation = Quaternion.Euler(0, 0, 0);
+                                tileManager.koramaP1.GetComponent<Pion>().tiles = null;
+                            }
+                            else if (pionOnMe.name == "KodamaSamurai P2")
+                            {
+                                tileManager.koramaP2.gameObject.transform.position = pionOnMe.transform.position;
+                                tileManager.koramaP2.gameObject.SetActive(true);
+
+                                tileManager.pionPlayerTop.Add(tileManager.koramaP2);
+                                tileManager.pionPlayerBot.Remove(tileManager.koramaP2);
+                                tileManager.koramaP2.GetComponent<Pion>().bot = false;
+                                tileManager.koramaP2.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
+                                tileManager.koramaP2.transform.rotation = Quaternion.Euler(0, 0, 0);
+                                tileManager.koramaP2.GetComponent<Pion>().tiles = null;
+                            }  
+
+                            Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+      
                         }
                         else
                         {
@@ -237,6 +268,7 @@ public class Tile : MonoBehaviour
                             pionOnMe.GetComponent<Renderer>().material = pionOnMe.GetComponent<Pion>().p2;
                             pionOnMe.transform.rotation = Quaternion.Euler(0, 0, 0);
                             pionOnMe.GetComponent<Pion>().tiles = null;
+
                             if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama")
                             {
                                 tileManager.pionPlayerTop.Add(tileManager.samuraP1);

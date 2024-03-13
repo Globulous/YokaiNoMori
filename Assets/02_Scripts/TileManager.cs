@@ -15,6 +15,8 @@ public class TileManager : MonoBehaviour
 
     public Pion samuraP1;
     public Pion samuraP2;
+    public Pion koramaP1;
+    public Pion koramaP2;
 
     public GameObject EndUi;
     public TextMeshProUGUI TEXTwIN;
