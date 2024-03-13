@@ -140,6 +140,7 @@ MonoBehaviour:
   bot: 1
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: 39ee6960a53a8cc4cafe665519b6325c, type: 2}
   p2: {fileID: 2100000, guid: 79ef21c7bc9e64249868f2471f9bc163, type: 2}
 --- !u!1 &46991215
@@ -407,6 +408,7 @@ MonoBehaviour:
   bot: 0
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: 1807e743faaab4a48badf2711cc4eda1, type: 2}
   p2: {fileID: 2100000, guid: 417c23f89a08c6f4885946be7f027cd7, type: 2}
 --- !u!114 &115941126
@@ -426,6 +428,7 @@ MonoBehaviour:
   bot: 0
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: f8eb5461f9d1cf44984a7875aac98da2, type: 2}
   p2: {fileID: 2100000, guid: 742bba4743f7eeb44b16ad83f9d0eee7, type: 2}
 --- !u!1 &140325029
@@ -862,6 +865,7 @@ MonoBehaviour:
   bot: 1
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: 1807e743faaab4a48badf2711cc4eda1, type: 2}
   p2: {fileID: 2100000, guid: 417c23f89a08c6f4885946be7f027cd7, type: 2}
 --- !u!1 &415342158
@@ -1020,6 +1024,7 @@ MonoBehaviour:
   bot: 1
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: 3d5dca23e1688c547aaa4916101cbbc5, type: 2}
   p2: {fileID: 2100000, guid: 8184cae9d6d962c4d944c584f08c1b6f, type: 2}
 --- !u!1 &546986881
@@ -1215,6 +1220,8 @@ MonoBehaviour:
   - {fileID: 89631031}
   - {fileID: 115941126}
   - {fileID: 6826203867479258406}
+  moovP1: []
+  moovP2: []
   actionPion: 0
   pionUse: {fileID: 0}
   textMeshProUGUI: {fileID: 794731608}
@@ -1405,6 +1412,7 @@ MonoBehaviour:
   bot: 0
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: 39ee6960a53a8cc4cafe665519b6325c, type: 2}
   p2: {fileID: 2100000, guid: 79ef21c7bc9e64249868f2471f9bc163, type: 2}
 --- !u!1 &705507993
@@ -1518,6 +1526,7 @@ MonoBehaviour:
   bot: 0
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: 3d5dca23e1688c547aaa4916101cbbc5, type: 2}
   p2: {fileID: 2100000, guid: 8184cae9d6d962c4d944c584f08c1b6f, type: 2}
 --- !u!1 &794731606
@@ -1688,7 +1697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 214, y: 507}
+  m_AnchoredPosition: {x: 415, y: 431}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799317243
@@ -1974,7 +1983,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997135440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1982,7 +1991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -171, y: -518}
+  m_AnchoredPosition: {x: -397.8, y: -463.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997135442
@@ -2397,6 +2406,7 @@ MonoBehaviour:
   bot: 1
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: f8eb5461f9d1cf44984a7875aac98da2, type: 2}
   p2: {fileID: 2100000, guid: 742bba4743f7eeb44b16ad83f9d0eee7, type: 2}
 --- !u!1 &1114224059
@@ -4733,6 +4743,7 @@ MonoBehaviour:
   bot: 0
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: 370ae4708f489354fa5f74e4cfe3bbaa, type: 2}
   p2: {fileID: 2100000, guid: b799f8c22bfdb1342aa79e0fa750256d, type: 2}
 --- !u!1 &6826203867662978526
@@ -4772,6 +4783,7 @@ MonoBehaviour:
   bot: 1
   tileManager: {fileID: 557155551}
   isDead: 0
+  transformation: 0
   p1: {fileID: 2100000, guid: 370ae4708f489354fa5f74e4cfe3bbaa, type: 2}
   p2: {fileID: 2100000, guid: b799f8c22bfdb1342aa79e0fa750256d, type: 2}
 --- !u!65 &6998767662114279655

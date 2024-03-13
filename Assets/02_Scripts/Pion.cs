@@ -327,7 +327,7 @@ public class Pion : MonoBehaviour
             }
         }
 
-        
+        tileManager.RefoundTiles();
     }
 
     public void FixedUpdate()//For swap kodama en kodama samura

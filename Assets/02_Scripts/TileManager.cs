@@ -137,6 +137,28 @@ public class TileManager : MonoBehaviour
 
     }
 
+    public void RefoundTiles()
+    {
+        for (int i = 0; i < pionPlayerBot.Count; i++)
+        {
+            if (pionPlayerBot[i].tiles != null)
+            {
+                pionPlayerBot[i].tiles.GetComponent<Tile>().pionOnMe = pionPlayerBot[i].gameObject;
+            }          
+        }
+
+        for (int i = 0; i < pionPlayerTop.Count; i++)
+        {
+            if (pionPlayerTop[i].tiles != null)
+            {
+                pionPlayerTop[i].tiles.GetComponent<Tile>().pionOnMe = pionPlayerTop[i].gameObject;
+            }
+        }
+
+
+
+    }
+
     public void ResetAllTileMatt()
     {
         for (int i = 0;i < tiles.Length;i++)
