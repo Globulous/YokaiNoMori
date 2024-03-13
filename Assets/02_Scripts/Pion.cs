@@ -16,7 +16,7 @@ public class Pion : MonoBehaviour
 
     public bool isDead;
     
-    private bool transformation = false;
+    public bool transformation = false;
 
     public Material p1;
     public Material p2;

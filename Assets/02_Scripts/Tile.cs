@@ -254,17 +254,30 @@ public class Tile : MonoBehaviour
                     if (tileManager.turnbot)//Add for match null 
                     {
                         tileManager.moovP1.Add("" + pionOnMe.GetComponent<Pion>().pionSO.pionName + Id);
+                        tileManager.pionDeadForP1.Remove(pionOnMe);
+                        if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama" && Id == 10 | Id == 11 | Id == 12)
+                        {
+                            pionOnMe.GetComponent<Pion>().transformation = true;
+                        }
                     }
                     else
                     {
                         tileManager.moovP2.Add("" + pionOnMe.GetComponent<Pion>().pionSO.pionName + Id);
+                        tileManager.pionDeadForP2.Remove(pionOnMe);
+                        if (pionOnMe.GetComponent<Pion>().pionSO.pionName == "Kodama" && Id == 1 | Id == 2 | Id == 3)
+                        {
+                            pionOnMe.GetComponent<Pion>().transformation = true;
+                        }
                     }
 
                     pionOnMe.GetComponent<Pion>().isDead = false;
+                    
 
                     Debug.Log("yaaa c'est ici !!!");
 
                     tileManager.EndTurn();
+
+                    
                 }
                 else
                 {
