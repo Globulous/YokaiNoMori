@@ -144,6 +144,7 @@ public class TileManager : MonoBehaviour
             if (pionPlayerBot[i].tiles != null)
             {
                 pionPlayerBot[i].tiles.GetComponent<Tile>().pionOnMe = pionPlayerBot[i].gameObject;
+                pionPlayerBot[i].KickHoldTile();
             }          
         }
 
@@ -152,6 +153,7 @@ public class TileManager : MonoBehaviour
             if (pionPlayerTop[i].tiles != null)
             {
                 pionPlayerTop[i].tiles.GetComponent<Tile>().pionOnMe = pionPlayerTop[i].gameObject;
+                pionPlayerTop[i].KickHoldTile();
             }
         }
 

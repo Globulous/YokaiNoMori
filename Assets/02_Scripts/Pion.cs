@@ -332,6 +332,7 @@ public class Pion : MonoBehaviour
 
         holdTile = tiles;
 
+        
         tileManager.RefoundTiles();
     }
 
@@ -433,7 +434,7 @@ public class Pion : MonoBehaviour
 
     public void KickHoldTile()
     {
-        if (!holdTile)
+        if (holdTile != null)
         {
             holdTile.GetComponent<Tile>().pionOnMe = null;
         }

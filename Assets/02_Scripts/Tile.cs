@@ -53,9 +53,7 @@ public class Tile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CheckTile();
-
-        
+        CheckTile();       
     }
 
     public void CheckTile()
@@ -85,8 +83,7 @@ public class Tile : MonoBehaviour
         }
 
 
-        // Debug dessiner le rayon
-        //Debug.DrawRay(raycastOrigin, Vector3.up * raycastDistance, Color.red);
+
     }
 
     public void Usable()
