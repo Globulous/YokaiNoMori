@@ -109,7 +109,7 @@ public class BaseIA : MonoBehaviour
         GameState gameState = new GameState();
 
         // Enregistrer les positions actuelles des pions
-        foreach (Pion pion in tileManager.pions)
+        /*foreach (Pion pion in tileManager.pions)
         {
             gameState.pionPositions.Add(pion.gameObject.transform.position);
         }
@@ -118,7 +118,7 @@ public class BaseIA : MonoBehaviour
         foreach (Tile tile in tileManager.tiles)
         {
             gameState.tileStates.Add(tile.imEmpty);
-        }
+        }*/
 
         return gameState;
     }
@@ -311,14 +311,14 @@ public class BaseIA : MonoBehaviour
         Tile tile = pion.tiles.GetComponent<Tile>();
 
         // Vérifier les tuiles adjacentes pour la présence d'une pièce ennemie
-        foreach (Tile adjacentTile in tileManager.GetAdjacentTiles(tile))
+        /*foreach (Tile adjacentTile in tileManager.GetAdjacentTiles(tile))
         {
             if (adjacentTile.pionOnMe != null && adjacentTile.pionOnMe.GetComponent<Pion>().bot != pion.bot)
             {
                 // Le pion est en danger s'il y a une pièce ennemie adjacente
                 return true;
             }
-        }
+        }*/
 
         // Le pion n'est pas en danger s'il n'y a pas de pièce ennemie adjacente
         return false;
@@ -376,25 +376,25 @@ public class BaseIA : MonoBehaviour
         float safetyScore = 1.0f;
 
         // Vérifier les menaces directes sur le roi
-        foreach (Tile adjacentTile in tileManager.GetAdjacentTiles(tile))// JE VERIFIE ICI OU SONT LES CASES ADJACENTES AUTOUR DE MOIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+        /*foreach (Tile adjacentTile in tileManager.GetAdjacentTiles(tile))// JE VERIFIE ICI OU SONT LES CASES ADJACENTES AUTOUR DE MOIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
         {
             if (adjacentTile.pionOnMe != null && adjacentTile.pionOnMe.GetComponent<Pion>().bot != tileManager.turnbot)
             {
                 // Le roi est menacé par une pièce adverse adjacente, réduire le score de sécurité
                 safetyScore -= 0.2f;
             }
-        }
+        }*/
 
         // Vérifier la protection par d'autres pièces
         int friendlyPieces = 0;
-        foreach (Tile adjacentTile in tileManager.GetAdjacentTiles(tile))
+        /*foreach (Tile adjacentTile in tileManager.GetAdjacentTiles(tile))
         {
             if (adjacentTile.pionOnMe != null && adjacentTile.pionOnMe.GetComponent<Pion>().bot == tileManager.turnbot)
             {
                 // La pièce adjacente est amie, augmenter le nombre de pièces amies
                 friendlyPieces++;
             }
-        }
+        }*/
         // Ajouter des points de sécurité en fonction du nombre de pièces amies adjacents
         safetyScore += friendlyPieces * 0.1f;
 
