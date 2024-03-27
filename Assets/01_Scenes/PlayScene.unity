@@ -123,27 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &21236633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8730850981125285433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pionSO: {fileID: 11400000, guid: 4ab2f2471dc565340a643a485df5cfa2, type: 2}
-  tiles: {fileID: 0}
-  bot: 1
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: 39ee6960a53a8cc4cafe665519b6325c, type: 2}
-  p2: {fileID: 2100000, guid: 79ef21c7bc9e64249868f2471f9bc163, type: 2}
-  holdTile: {fileID: 0}
 --- !u!1 &46991215
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +168,7 @@ GameObject:
   - component: {fileID: 84062675}
   - component: {fileID: 84062679}
   m_Layer: 0
-  m_Name: Tile 7
+  m_Name: Tile_2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,30 +269,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 84062674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 7
-  imEmpty: 0
-  pionTransform: {x: -3, y: 0.5, z: 1.76}
-  tileForward: {fileID: 1618920797}
-  tileForwardRight: {fileID: 358668996}
-  tileForwardLeft: {fileID: 0}
-  tileRight: {fileID: 285570708}
-  tileLeft: {fileID: 0}
-  tileBack: {fileID: 1646843528}
-  tileBackLeft: {fileID: 0}
-  tileBackRight: {fileID: 1219020630}
+  tileType: 214
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 0}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &85442204
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,48 +357,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85442204}
   m_CullTransparentMesh: 1
---- !u!114 &89631031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7589295056292898379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pionSO: {fileID: 11400000, guid: fd0fe46cf35f0a34e969cc0c791bfa98, type: 2}
-  tiles: {fileID: 0}
-  bot: 0
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: 1807e743faaab4a48badf2711cc4eda1, type: 2}
-  p2: {fileID: 2100000, guid: 417c23f89a08c6f4885946be7f027cd7, type: 2}
-  holdTile: {fileID: 0}
---- !u!114 &115941126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8487640613040605728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pionSO: {fileID: 11400000, guid: 3d7c77f092c37124f9f4a4aa48dfb2fa, type: 2}
-  tiles: {fileID: 0}
-  bot: 0
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: f8eb5461f9d1cf44984a7875aac98da2, type: 2}
-  p2: {fileID: 2100000, guid: 742bba4743f7eeb44b16ad83f9d0eee7, type: 2}
-  holdTile: {fileID: 0}
 --- !u!1 &140325029
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +371,7 @@ GameObject:
   - component: {fileID: 140325030}
   - component: {fileID: 140325034}
   m_Layer: 0
-  m_Name: Tile 3
+  m_Name: Tile_0_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,30 +472,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 140325029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 3
-  imEmpty: 0
-  pionTransform: {x: 3, y: 0.5, z: -5.45}
-  tileForward: {fileID: 1961534397}
-  tileForwardRight: {fileID: 0}
-  tileForwardLeft: {fileID: 1219020630}
-  tileRight: {fileID: 0}
-  tileLeft: {fileID: 1526049089}
-  tileBack: {fileID: 0}
-  tileBackLeft: {fileID: 0}
-  tileBackRight: {fileID: 0}
+  tileType: 11
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &285570708
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +496,7 @@ GameObject:
   - component: {fileID: 285570709}
   - component: {fileID: 285570713}
   m_Layer: 0
-  m_Name: Tile 8
+  m_Name: Tile_2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -688,30 +597,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 285570708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 8
-  imEmpty: 0
-  pionTransform: {x: 0, y: 0.5, z: 1.75}
-  tileForward: {fileID: 358668996}
-  tileForwardRight: {fileID: 1951995122}
-  tileForwardLeft: {fileID: 1618920797}
-  tileRight: {fileID: 581831309}
-  tileLeft: {fileID: 84062674}
-  tileBack: {fileID: 1219020630}
-  tileBackLeft: {fileID: 1646843528}
-  tileBackRight: {fileID: 1961534397}
+  tileType: -1
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 0}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &358668996
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +621,7 @@ GameObject:
   - component: {fileID: 358668997}
   - component: {fileID: 358669001}
   m_Layer: 0
-  m_Name: Tile 11
+  m_Name: Tile_3_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,51 +722,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 358668996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 11
-  imEmpty: 0
-  pionTransform: {x: 0, y: 0.5, z: 5.4}
-  tileForward: {fileID: 0}
-  tileForwardRight: {fileID: 0}
-  tileForwardLeft: {fileID: 0}
-  tileRight: {fileID: 1951995122}
-  tileLeft: {fileID: 1618920797}
-  tileBack: {fileID: 285570708}
-  tileBackLeft: {fileID: 84062674}
-  tileBackRight: {fileID: 581831309}
+  tileType: 248
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &379757561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7589295056025185417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pionSO: {fileID: 11400000, guid: fd0fe46cf35f0a34e969cc0c791bfa98, type: 2}
-  tiles: {fileID: 0}
-  bot: 1
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: 1807e743faaab4a48badf2711cc4eda1, type: 2}
-  p2: {fileID: 2100000, guid: 417c23f89a08c6f4885946be7f027cd7, type: 2}
-  holdTile: {fileID: 0}
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 0}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &415342158
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +746,7 @@ GameObject:
   - component: {fileID: 415342159}
   - component: {fileID: 415342163}
   m_Layer: 0
-  m_Name: Tile 1
+  m_Name: Tile_0_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -987,51 +847,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 415342158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 1
-  imEmpty: 0
-  pionTransform: {x: -3, y: 0.5, z: -5.43}
-  tileForward: {fileID: 1646843528}
-  tileForwardRight: {fileID: 1219020630}
-  tileForwardLeft: {fileID: 0}
-  tileRight: {fileID: 1526049089}
-  tileLeft: {fileID: 0}
-  tileBack: {fileID: 0}
-  tileBackLeft: {fileID: 0}
-  tileBackRight: {fileID: 0}
+  tileType: 22
+  gameManager: {fileID: 1993027630}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &490890633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6127632433497302185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pionSO: {fileID: 11400000, guid: 4b083033a6ad9164e8894b691b157a63, type: 2}
-  tiles: {fileID: 0}
-  bot: 1
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: 3d5dca23e1688c547aaa4916101cbbc5, type: 2}
-  p2: {fileID: 2100000, guid: 8184cae9d6d962c4d944c584f08c1b6f, type: 2}
-  holdTile: {fileID: 0}
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &546986881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,24 +1002,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557155546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f94d60c9b037c9498d3ff4c575d4bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 415342163}
-  - {fileID: 1526049094}
-  - {fileID: 140325034}
-  - {fileID: 1646843533}
-  - {fileID: 1219020635}
-  - {fileID: 1961534402}
-  - {fileID: 84062679}
-  - {fileID: 285570713}
-  - {fileID: 581831314}
-  - {fileID: 1618920802}
-  - {fileID: 358669001}
-  - {fileID: 1951995127}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cimP1:
   - {fileID: 578432024}
   - {fileID: 546986881}
@@ -1207,10 +1032,10 @@ MonoBehaviour:
   - {fileID: 1444523802}
   roiP1: {fileID: 7589295056025185417}
   roiP2: {fileID: 7589295056292898379}
-  samuraP1: {fileID: 6826203867662978527}
-  samuraP2: {fileID: 6826203867479258406}
-  koramaP1: {fileID: 21236633}
-  koramaP2: {fileID: 611193533}
+  samuraP1: {fileID: 0}
+  samuraP2: {fileID: 0}
+  koramaP1: {fileID: 0}
+  koramaP2: {fileID: 0}
   EndUi: {fileID: 85442204}
   TEXTwIN: {fileID: 1813447740}
   pionDeadForP1: []
@@ -1218,17 +1043,17 @@ MonoBehaviour:
   tilesEmpty: []
   turnbot: 1
   pionPlayerBot:
-  - {fileID: 490890633}
-  - {fileID: 21236633}
-  - {fileID: 379757561}
-  - {fileID: 1106991460}
-  - {fileID: 6826203867662978527}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   pionPlayerTop:
-  - {fileID: 705574382}
-  - {fileID: 611193533}
-  - {fileID: 89631031}
-  - {fileID: 115941126}
-  - {fileID: 6826203867479258406}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   moovP1: []
   moovP2: []
   actionPion: 0
@@ -1279,7 +1104,7 @@ GameObject:
   - component: {fileID: 581831310}
   - component: {fileID: 581831314}
   m_Layer: 0
-  m_Name: Tile 9
+  m_Name: Tile_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1380,51 +1205,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 581831309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 9
-  imEmpty: 0
-  pionTransform: {x: 3, y: 0.5, z: 1.75}
-  tileForward: {fileID: 1951995122}
-  tileForwardRight: {fileID: 0}
-  tileForwardLeft: {fileID: 358668996}
-  tileRight: {fileID: 0}
-  tileLeft: {fileID: 285570708}
-  tileBack: {fileID: 1961534397}
-  tileBackLeft: {fileID: 1219020630}
-  tileBackRight: {fileID: 0}
+  tileType: 107
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &611193533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8730850981614321429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pionSO: {fileID: 11400000, guid: 4ab2f2471dc565340a643a485df5cfa2, type: 2}
-  tiles: {fileID: 0}
-  bot: 0
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: 39ee6960a53a8cc4cafe665519b6325c, type: 2}
-  p2: {fileID: 2100000, guid: 79ef21c7bc9e64249868f2471f9bc163, type: 2}
-  holdTile: {fileID: 0}
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 0}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,27 +1309,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &705574382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6127632433879233730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pionSO: {fileID: 11400000, guid: 4b083033a6ad9164e8894b691b157a63, type: 2}
-  tiles: {fileID: 0}
-  bot: 0
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: 3d5dca23e1688c547aaa4916101cbbc5, type: 2}
-  p2: {fileID: 2100000, guid: 8184cae9d6d962c4d944c584f08c1b6f, type: 2}
-  holdTile: {fileID: 0}
 --- !u!1 &794731606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,27 +2169,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096782771}
   m_CullTransparentMesh: 1
---- !u!114 &1106991460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8487640614197038150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pionSO: {fileID: 11400000, guid: 3d7c77f092c37124f9f4a4aa48dfb2fa, type: 2}
-  tiles: {fileID: 0}
-  bot: 1
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: f8eb5461f9d1cf44984a7875aac98da2, type: 2}
-  p2: {fileID: 2100000, guid: 742bba4743f7eeb44b16ad83f9d0eee7, type: 2}
-  holdTile: {fileID: 0}
 --- !u!1 &1114224059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,7 +2317,7 @@ GameObject:
   - component: {fileID: 1219020631}
   - component: {fileID: 1219020635}
   m_Layer: 0
-  m_Name: Tile 5
+  m_Name: Tile_1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2670,30 +2418,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1219020630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 5
-  imEmpty: 1
-  pionTransform: {x: 0, y: 0.5, z: -1.85}
-  tileForward: {fileID: 285570708}
-  tileForwardRight: {fileID: 581831309}
-  tileForwardLeft: {fileID: 84062674}
-  tileRight: {fileID: 1961534397}
-  tileLeft: {fileID: 1646843528}
-  tileBack: {fileID: 1526049089}
-  tileBackLeft: {fileID: 415342158}
-  tileBackRight: {fileID: 140325029}
+  tileType: -1
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 0}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &1312702280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,7 +2566,7 @@ GameObject:
   - component: {fileID: 1526049090}
   - component: {fileID: 1526049094}
   m_Layer: 0
-  m_Name: Tile 2
+  m_Name: Tile_0_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2933,30 +2667,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1526049089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 2
-  imEmpty: 0
-  pionTransform: {x: 0, y: 0.5, z: -5.45}
-  tileForward: {fileID: 1219020630}
-  tileForwardRight: {fileID: 1961534397}
-  tileForwardLeft: {fileID: 1646843528}
-  tileRight: {fileID: 140325029}
-  tileLeft: {fileID: 415342158}
-  tileBack: {fileID: 0}
-  tileBackLeft: {fileID: 0}
-  tileBackRight: {fileID: 0}
+  tileType: 31
+  gameManager: {fileID: 1993027630}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &1618920797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,7 +2691,7 @@ GameObject:
   - component: {fileID: 1618920798}
   - component: {fileID: 1618920802}
   m_Layer: 0
-  m_Name: Tile 10
+  m_Name: Tile_3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3072,30 +2792,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618920797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 10
-  imEmpty: 1
-  pionTransform: {x: -3, y: 0.5, z: 5.4}
-  tileForward: {fileID: 0}
-  tileForwardRight: {fileID: 0}
-  tileForwardLeft: {fileID: 0}
-  tileRight: {fileID: 358668996}
-  tileLeft: {fileID: 0}
-  tileBack: {fileID: 84062674}
-  tileBackLeft: {fileID: 0}
-  tileBackRight: {fileID: 285570708}
+  tileType: 208
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 0}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &1646843528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,7 +2816,7 @@ GameObject:
   - component: {fileID: 1646843529}
   - component: {fileID: 1646843533}
   m_Layer: 0
-  m_Name: Tile 4
+  m_Name: Tile_1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3211,30 +2917,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646843528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 4
-  imEmpty: 0
-  pionTransform: {x: -3, y: 0.5, z: -1.85}
-  tileForward: {fileID: 84062674}
-  tileForwardRight: {fileID: 285570708}
-  tileForwardLeft: {fileID: 0}
-  tileRight: {fileID: 1219020630}
-  tileLeft: {fileID: 0}
-  tileBack: {fileID: 415342158}
-  tileBackLeft: {fileID: 0}
-  tileBackRight: {fileID: 1526049089}
+  tileType: 214
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &1813447738
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,7 +3224,7 @@ GameObject:
   - component: {fileID: 1951995123}
   - component: {fileID: 1951995127}
   m_Layer: 0
-  m_Name: Tile 12
+  m_Name: Tile_3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3633,30 +3325,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1951995122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 12
-  imEmpty: 0
-  pionTransform: {x: 3, y: 0.5, z: 5.4}
-  tileForward: {fileID: 0}
-  tileForwardRight: {fileID: 0}
-  tileForwardLeft: {fileID: 0}
-  tileRight: {fileID: 0}
-  tileLeft: {fileID: 358668996}
-  tileBack: {fileID: 581831309}
-  tileBackLeft: {fileID: 285570708}
-  tileBackRight: {fileID: 0}
+  tileType: 104
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 0}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &1961534397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,7 +3349,7 @@ GameObject:
   - component: {fileID: 1961534398}
   - component: {fileID: 1961534402}
   m_Layer: 0
-  m_Name: Tile 6
+  m_Name: Tile_1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3772,30 +3450,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1961534397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0e07819cc17c54293d7cfcc28de1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: db702bb406341a34babae8cf4c4a34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 6
-  imEmpty: 0
-  pionTransform: {x: 3, y: 0.5, z: -1.85}
-  tileForward: {fileID: 581831309}
-  tileForwardRight: {fileID: 0}
-  tileForwardLeft: {fileID: 285570708}
-  tileRight: {fileID: 0}
-  tileLeft: {fileID: 1219020630}
-  tileBack: {fileID: 140325029}
-  tileBackLeft: {fileID: 1526049089}
-  tileBackRight: {fileID: 0}
+  tileType: 107
+  gameManager: {fileID: 0}
   pionOnMe: {fileID: 0}
-  imGoodForPlay: 0
-  normalColor: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
-  usableColor: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
-  usableKillColor: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
-  tileManager: {fileID: 557155551}
-  raycastDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  getRedy: 0
+  m_Good: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  m_Normal: {fileID: 0}
+  m_kill: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
 --- !u!1 &1993027628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,8 +3469,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1993027629}
+  - component: {fileID: 1993027630}
   m_Layer: 0
-  m_Name: ----------Pion--------------
+  m_Name: ----------TileGM--------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3827,6 +3492,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993027630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993027628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7513e1593070e409b9e1e2368d5dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodMat: {fileID: 2100000, guid: db3f77eb4f7249a4ab7d0e00969eb8f2, type: 2}
+  normalMat: {fileID: 2100000, guid: ed7df0dbb6276d74eb879f8bb7c589a0, type: 2}
+  killMat: {fileID: 2100000, guid: a6b207d01401b5240ad1fc3045791be0, type: 2}
+  step: 0
+  PionPlayer1OnBoard:
+  - {fileID: 6127632433497302185}
+  - {fileID: 7589295056025185417}
+  - {fileID: 8487640614197038150}
+  - {fileID: 8730850981125285433}
+  - {fileID: 6826203867662978526}
+  PionPlayer2OnBoard:
+  - {fileID: 6127632433879233730}
+  - {fileID: 7589295056292898379}
+  - {fileID: 8487640613040605728}
+  - {fileID: 8730850981614321429}
+  - {fileID: 6826203867479258405}
+  PionPlayer1OnCim: []
+  PionPlayer2OnCim: []
+  transformCimPlayer1:
+  - {fileID: 578432029}
+  - {fileID: 546986886}
+  - {fileID: 1007297378}
+  - {fileID: 1438923674}
+  transformCimPlayer2:
+  - {fileID: 1312702285}
+  - {fileID: 46991220}
+  - {fileID: 1452715473}
+  - {fileID: 1444523807}
+  playerSelected: {fileID: 0}
 --- !u!1 &2013058163
 GameObject:
   m_ObjectHideFlags: 0
@@ -4690,7 +4396,7 @@ GameObject:
   - component: {fileID: 2045013284105834603}
   - component: {fileID: 7996075761352877912}
   - component: {fileID: 3746082815865396280}
-  - component: {fileID: 490890633}
+  - component: {fileID: 7996075761352877913}
   m_Layer: 0
   m_Name: Kitsune P1
   m_TagString: Untagged
@@ -4710,7 +4416,7 @@ GameObject:
   - component: {fileID: 2045013283422404608}
   - component: {fileID: 7996075760668440371}
   - component: {fileID: 3746082815105977427}
-  - component: {fileID: 705574382}
+  - component: {fileID: 7996075760668440372}
   m_Layer: 0
   m_Name: Kitsune P2
   m_TagString: Untagged
@@ -4747,18 +4453,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6826203867479258405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   pionSO: {fileID: 11400000, guid: cf4186109379a5a4e85202060a971fbd, type: 2}
-  tiles: {fileID: 0}
-  bot: 0
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: 370ae4708f489354fa5f74e4cfe3bbaa, type: 2}
-  p2: {fileID: 2100000, guid: b799f8c22bfdb1342aa79e0fa750256d, type: 2}
-  holdTile: {fileID: 0}
+  imPlayer1: 0
+  tileUderMe: {fileID: 0}
 --- !u!1 &6826203867662978526
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,18 +4489,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6826203867662978526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77865fbabfd6a24f8ad04029c20972e, type: 3}
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   pionSO: {fileID: 11400000, guid: cf4186109379a5a4e85202060a971fbd, type: 2}
-  tiles: {fileID: 0}
-  bot: 1
-  tileManager: {fileID: 557155551}
-  isDead: 0
-  transformation: 0
-  p1: {fileID: 2100000, guid: 370ae4708f489354fa5f74e4cfe3bbaa, type: 2}
-  p2: {fileID: 2100000, guid: b799f8c22bfdb1342aa79e0fa750256d, type: 2}
-  holdTile: {fileID: 0}
+  imPlayer1: 0
+  tileUderMe: {fileID: 0}
 --- !u!65 &6998767662114279655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4854,7 +4550,7 @@ GameObject:
   - component: {fileID: 1039135882248230639}
   - component: {fileID: 1039802301595595819}
   - component: {fileID: 6998767662388288037}
-  - component: {fileID: 379757561}
+  - component: {fileID: 7589295056025185418}
   m_Layer: 0
   m_Name: Koropokkuru P1
   m_TagString: Untagged
@@ -4862,6 +4558,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7589295056025185418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7589295056025185417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pionSO: {fileID: 11400000, guid: fd0fe46cf35f0a34e969cc0c791bfa98, type: 2}
+  imPlayer1: 1
+  tileUderMe: {fileID: 0}
 --- !u!1 &7589295056292898379
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,7 +4586,7 @@ GameObject:
   - component: {fileID: 1039135882490256429}
   - component: {fileID: 1039802301822811881}
   - component: {fileID: 6998767662114279655}
-  - component: {fileID: 89631031}
+  - component: {fileID: 7589295056292898380}
   m_Layer: 0
   m_Name: Koropokkuru P2
   m_TagString: Untagged
@@ -4882,6 +4594,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7589295056292898380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7589295056292898379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pionSO: {fileID: 11400000, guid: fd0fe46cf35f0a34e969cc0c791bfa98, type: 2}
+  imPlayer1: 0
+  tileUderMe: {fileID: 0}
 --- !u!23 &7996075760668440371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4924,6 +4652,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7996075760668440372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6127632433879233730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pionSO: {fileID: 11400000, guid: 4b083033a6ad9164e8894b691b157a63, type: 2}
+  imPlayer1: 0
+  tileUderMe: {fileID: 0}
 --- !u!23 &7996075761352877912
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4966,6 +4710,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7996075761352877913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6127632433497302185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pionSO: {fileID: 11400000, guid: 4b083033a6ad9164e8894b691b157a63, type: 2}
+  imPlayer1: 1
+  tileUderMe: {fileID: 0}
 --- !u!1 &8487640613040605728
 GameObject:
   m_ObjectHideFlags: 0
@@ -4978,7 +4738,7 @@ GameObject:
   - component: {fileID: 8972478359211243202}
   - component: {fileID: 1452557121597345860}
   - component: {fileID: 5755082038796122879}
-  - component: {fileID: 115941126}
+  - component: {fileID: 8972478359211243203}
   m_Layer: 0
   m_Name: Tanuki P2
   m_TagString: Untagged
@@ -4998,7 +4758,7 @@ GameObject:
   - component: {fileID: 8972478360302661796}
   - component: {fileID: 1452557122789463586}
   - component: {fileID: 5755082037606104217}
-  - component: {fileID: 1106991460}
+  - component: {fileID: 8972478360302661797}
   m_Layer: 0
   m_Name: Tanuki P1
   m_TagString: Untagged
@@ -5018,7 +4778,7 @@ GameObject:
   - component: {fileID: 3588196538984934176}
   - component: {fileID: 3239022202951635255}
   - component: {fileID: 4342678790535411177}
-  - component: {fileID: 21236633}
+  - component: {fileID: 8730850981125285434}
   m_Layer: 0
   m_Name: Kodama P1
   m_TagString: Untagged
@@ -5026,6 +4786,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8730850981125285434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8730850981125285433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pionSO: {fileID: 11400000, guid: 4ab2f2471dc565340a643a485df5cfa2, type: 2}
+  imPlayer1: 1
+  tileUderMe: {fileID: 0}
 --- !u!1 &8730850981614321429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5038,7 +4814,7 @@ GameObject:
   - component: {fileID: 3588196538529198604}
   - component: {fileID: 3239022203574093851}
   - component: {fileID: 4342678790046379205}
-  - component: {fileID: 611193533}
+  - component: {fileID: 8730850981614321430}
   m_Layer: 0
   m_Name: Kodama P2
   m_TagString: Untagged
@@ -5046,6 +4822,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8730850981614321430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8730850981614321429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pionSO: {fileID: 11400000, guid: 4ab2f2471dc565340a643a485df5cfa2, type: 2}
+  imPlayer1: 0
+  tileUderMe: {fileID: 0}
 --- !u!33 &8972478359211243202
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5054,6 +4846,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8487640613040605728}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8972478359211243203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487640613040605728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pionSO: {fileID: 11400000, guid: 3d7c77f092c37124f9f4a4aa48dfb2fa, type: 2}
+  imPlayer1: 0
+  tileUderMe: {fileID: 0}
 --- !u!33 &8972478360302661796
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5062,6 +4870,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8487640614197038150}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8972478360302661797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487640614197038150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3834a60a94d347a5d996a9258a058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pionSO: {fileID: 11400000, guid: 3d7c77f092c37124f9f4a4aa48dfb2fa, type: 2}
+  imPlayer1: 1
+  tileUderMe: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
